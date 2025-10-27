@@ -1,7 +1,7 @@
 {
   "name": "Laporan Harian PPPK",
   "short_name": "Laporan Harian",
-  "start_url": "./index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3273dc",
@@ -14,7 +14,7 @@
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open("laporan-cache").then((cache) => {
-      return cache.addAll(["./", "./index.html", "./manifest.json"]);
+      return cache.addAll(["./", "index.html", "./manifest.json"]);
     })
   );
 });
