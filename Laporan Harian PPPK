@@ -14,7 +14,7 @@
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open("laporan-cache").then((cache) => {
-      return cache.addAll(["./", "index.html", "./manifest.json"]);
+      return cache.addAll(["./", "./index.html", "./manifest.json"]);
     })
   );
 });
@@ -55,6 +55,7 @@ self.addEventListener("fetch", (e) => {
         </div>
       </div>
     </section>
+
     <form id="form" class="container m-4 pl-4">
       <div class="field">
         <label class="label">Tanggal</label>
@@ -71,18 +72,10 @@ self.addEventListener("fetch", (e) => {
       <div class="field">
         <label class="label">Tim Kerja</label>
         <div class="control">
-          <label class="radio">
-            <input type="radio" name="Tim Kerja" value="Rumah Tangga" /> Rumah Tangga
-          </label>
-          <label class="radio">
-            <input type="radio" name="Tim Kerja" value="IT Suporting" /> IT Suporting
-          </label>
-          <label class="radio">
-            <input type="radio" name="Tim Kerja" value="Humas dan Protokol" /> Humas dan Protokol
-          </label>
-          <label class="radio">
-            <input type="radio" name="Tim Kerja" value="PPID" /> PPID
-          </label>
+          <label class="radio"><input type="radio" name="Tim Kerja" value="Rumah Tangga" /> Rumah Tangga</label>
+          <label class="radio"><input type="radio" name="Tim Kerja" value="IT Suporting" /> IT Suporting</label>
+          <label class="radio"><input type="radio" name="Tim Kerja" value="Humas dan Protokol" /> Humas dan Protokol</label>
+          <label class="radio"><input type="radio" name="Tim Kerja" value="PPID" /> PPID</label>
         </div>
       </div>
       <div class="field">
@@ -119,7 +112,9 @@ self.addEventListener("fetch", (e) => {
         </div>
       </div>
     </form>
+
     <div id="message" style="display: none; margin: 20px; padding: 10px; border-radius: 4px; font-weight: bold;"></div>
+
     <script>
       const form = document.getElementById("form");
       const submitButton = document.getElementById("submit-button");
